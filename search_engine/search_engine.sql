@@ -1,0 +1,9 @@
+USE templates;
+CREATE TABLE search_engine (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  date DATETIME NOT NULL DEFAULT NOW(),
+  url VARCHAR(255) NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  teaser TEXT NOT NULL,
+  FULLTEXT(title)
+) CHARSET=latin1;
